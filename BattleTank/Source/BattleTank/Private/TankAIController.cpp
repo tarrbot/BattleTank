@@ -22,6 +22,19 @@ void ATankAIController::BeginPlay()
 	UE_LOG(LogTemp, Warning, TEXT("AI Controller Begin Play"));
 }
 
+// Called every Frame
+void ATankAIController::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+	if (GetPlayerTank())
+		// Move Towards the Player
+
+		// Aim Towards the Player
+		GetControlledTank()->AimAt(GetPlayerTank()->GetActorLocation());
+			// Fire if Ready
+		
+}
+
 ATank* ATankAIController::GetControlledTank() const
 {
 

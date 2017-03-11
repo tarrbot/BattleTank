@@ -40,7 +40,7 @@ void ATankPlayerController::AimTowardsCrosshair()
 	FVector HitLocation; // Out Parameter
 	if (GetSightRayHitLocation(HitLocation))// is going to line trace
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Hit Location: %s"), *HitLocation.ToString());
+		GetControlledTank()->AimAt(HitLocation);
 		
 			// if it hits the landscape
 				// do the next video
