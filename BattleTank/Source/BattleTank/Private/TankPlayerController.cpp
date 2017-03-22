@@ -68,6 +68,8 @@ bool ATankPlayerController::GetSightRayHitLocation(FVector& HitLocation) const
 	return true;
 }
 
+
+
 bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const 
 {
 	FHitResult HitResult;
@@ -78,6 +80,7 @@ bool ATankPlayerController::GetLookVectorHitLocation(FVector LookDirection, FVec
 		StartLocation,
 		EndLocation,
 		ECollisionChannel::ECC_Visibility)
+		
 		)
 	{
 	
@@ -98,3 +101,4 @@ bool ATankPlayerController::GetLookDirection(FVector2D ScreenLocation, FVector& 
 return	DeprojectScreenPositionToWorld(ScreenLocation.X, ScreenLocation.Y, CameraWorldLocation, LookDirection);
 
 }
+
