@@ -24,6 +24,8 @@ private:
 	
 	ATank* GetControlledTank() const;
 	
+	// how close can the enemy tank get to the player
+	float AcceptanceRadius = 3000;
 	
 	
 };
