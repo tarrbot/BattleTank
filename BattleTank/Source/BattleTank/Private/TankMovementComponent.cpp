@@ -27,7 +27,7 @@ void UTankMovementComponent::RequestDirectMove(const FVector& MoveVelocity, bool
 
 void UTankMovementComponent::IntendMoveFoward(float Throw)
 {
-		LeftTrack->SetThrottle(Throw);
+	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(Throw);
 }
 
