@@ -12,17 +12,20 @@ void UTankMovementComponent::Initilise(UTankTrack* LeftTrackToSet, UTankTrack* R
 	RightTrack = RightTrackToSet;
 }
 
-
-
-
-
 void UTankMovementComponent::IntendMoveFoward(float Throw)
 {
-
-	UE_LOG(LogTemp, Warning, TEXT("intend move forward: %f"),Throw)
+	
 
 	LeftTrack->SetThrottle(Throw);
 	RightTrack->SetThrottle(Throw);
+}
 
-	// TODO prevent cross over input
+void UTankMovementComponent::IntendTurnRight(float Throw)
+{
+
+
+
+
+	LeftTrack->SetThrottle(Throw);
+	RightTrack->SetThrottle(-Throw);
 }
