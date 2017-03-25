@@ -13,34 +13,22 @@ ATank::ATank()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = false;
-
-
-
-	
 }
-
-
-
-
-
-
-
-
 
 void ATank::AimAt(FVector HitLocation)
 {
+	if (!ensure(TankAimingComponent)) { return; }
 	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
-	
 }
 
 void ATank::Fire()
 {
-	auto Time = GetWorld()->GetTimeSeconds();
-	UE_LOG(LogTemp, Warning, TEXT("%f: Tank Fires"), Time);
+	
 
+	if (!ensure(Barrel)) { return; }	
 	bool isReloaded = (FPlatformTime::Seconds() - LastFireTime) > ReloadTimeInSeconds;
 	
-	if (Barrel && isReloaded) {
+	if (isReloaded) {
 
 		// Spawn a projectile at the socekt locationon the barrel 
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(

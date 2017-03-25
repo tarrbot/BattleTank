@@ -34,7 +34,7 @@ private:
 	// Sets default values for this pawn's properties
 	ATank();
 
-
+	
 	
 	UPROPERTY(EditDefaultsOnly, Category = "Setup")
 		TSubclassOf<AProjectile> ProjectileBluePrint;
