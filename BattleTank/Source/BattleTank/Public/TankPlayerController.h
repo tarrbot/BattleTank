@@ -19,15 +19,16 @@ class BATTLETANK_API ATankPlayerController : public APlayerController
 	
 public:
 	
-	
+protected:
+	UFUNCTION(BlueprintCallable, Category = "Setup")
+	ATank* GetControlledTank() const;
 
 	void BeginPlay() override;
 
 	virtual void Tick(float DeltaTime) override;
 
 private: 
-
-	ATank* GetControlledTank() const;
+	
 	
 	// Start the tank barrel towards the Crosshair
 	void AimTowardsCrosshair();

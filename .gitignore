@@ -60,3 +60,8 @@ Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+BattleTank/Saved/
+BattleTank/Intermediate/
+BattleTank/Binaries/
+BattleTank/BattleTank.VC.db
+BattleTank/Build/WindowsNoEditor/FileOpenOrder/CookerOpenOrder.log

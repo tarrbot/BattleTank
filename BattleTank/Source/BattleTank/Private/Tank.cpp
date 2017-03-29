@@ -40,7 +40,7 @@ void ATank::Fire()
 	
 	if (isReloaded) {
 
-		// Spawn a projectile at the socekt locationon the barrel 
+		// Spawn a projectile at the socket
 		auto Projectile = GetWorld()->SpawnActor<AProjectile>(
 			ProjectileBluePrint,
 			Barrel->GetSocketLocation(FName("Projectile")),
